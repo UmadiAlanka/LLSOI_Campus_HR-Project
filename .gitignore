@@ -1,0 +1,19 @@
+# Maven
+target/
+*.class
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+
+# Environment
+.env.local
+.env
+
+# Others
+node_modules/
+bin/
+
+target/
+
