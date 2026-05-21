@@ -1,0 +1,434 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* HEADER STYLES */
+.topHeader {
+  background-color: #7a1212;
+  color: #ffcc00; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  height: 80px; 
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+  flex-shrink: 0;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mainLogo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.systemTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffcc00; 
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffcc00; 
+}
+
+.userText p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.userText span {
+  font-size: 0.8rem;
+  display: block;
+  text-align: right;
+}
+
+.avatarImg {
+  width: 30px;
+  height: 30px;
+  object-fit: contain; 
+}
+
+.dashboardBody {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 280px;
+  min-width: 280px;
+  background: rgba(207, 207, 207, 0.25); 
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  height: 100%;
+  overflow-y: auto;
+  flex-shrink: 0;
+  padding-top: 20px;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.navLink {
+  padding: 15px 25px;
+  border-radius: 40px;
+  margin: 10px;
+  color: #0b0b0b;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navIcon {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+}
+
+.active {
+  background-color: rgba(207, 207, 207, 0.25);
+  border-left: 5px solid #7a1212;
+  color: #0b0b0b;
+}
+
+.navLink:hover {
+  background-color: #ffffff;
+}
+
+/* MAIN CONTENT AREA */
+.mainContent {
+  flex: 1;
+  min-width: 0;
+  background-color: rgba(76, 67, 67, 0.444); 
+  padding: 40px;
+  color: white;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.sectionHeading {
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* DASHBOARD CARDS */
+.attendanceHero {
+  background: white;
+  border-radius: 8px;
+  padding: 60px;
+  text-align: center;
+  margin-bottom: 50px; 
+  font-size: 25px;
+  color: #7a1212;
+  font-weight: 800;
+  border: 3px solid #7a1212; 
+}
+
+.attendanceDate {
+  margin-bottom: 10px;
+}
+
+.markAttendanceBtn {
+  background: #7a1212;
+  color: white;
+  border: none;
+  padding: 12px 50px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px auto 0;
+  text-align: center;
+}
+
+.btnIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.whiteCard {
+  background: #ffffff;
+  border: 1px solid #7a1212; 
+  border-radius: 15px;
+  padding: 35px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  justify-content: center; 
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  color: #7a1212;
+}
+
+.cardIcon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.cardLabel {
+  font-weight: bold;
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.statSubtext {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0;
+}
+
+.dateValue {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #7a1212;
+  margin-top: 4px;
+}
+
+.attendanceDetail p {
+  margin: 2px 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.actionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.actionButton {
+  background: white;
+  border: 1px solid #7a1212; 
+  padding: 15px;
+  border-radius: 6px;
+  color: #7a1212;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.smallBtnIcon {
+  width: 20px;
+  height: 20px;
+}
+
+/* HOLIDAY MODAL STYLES */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modalContent {
+  background: rgba(255, 255, 255, 0.95);
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modalHeader {
+  background: #7a1212;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeader h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modalBody {
+  padding: 10px 20px 20px;
+  overflow-y: auto;
+  max-height: calc(80vh - 120px);
+}
+
+.calendarControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.navBtn {
+  background: #7a1212;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.monthLabel {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.dayHeader {
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0;
+  color: #7a1212;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.calendarDay {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+  position: relative;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.emptyDay {
+  aspect-ratio: 1;
+}
+
+.dayNum {
+  font-size: 1rem;
+  color: #444;
+}
+
+.isHoliday {
+  background: #fff8f8;
+  border: 2px solid #7a1212;
+  cursor: pointer;
+}
+
+.isHoliday .dayNum {
+  color: #7a1212;
+  font-weight: bold;
+}
+
+.holidayIndicator {
+  width: 6px;
+  height: 6px;
+  background: #7a1212;
+  border-radius: 50%;
+  margin-top: 4px;
+}
+
+.holidayPopup {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 10;
+  margin-bottom: 5px;
+}
+
+.calendarDay:hover .holidayPopup {
+  opacity: 1;
+}
+
+.calendarDay:hover {
+  background: #f0f0f0;
+}
